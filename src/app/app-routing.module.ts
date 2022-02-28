@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SecurityGuard } from '@core/guard/security.guard';
 import { HomeComponent } from '@home/home.component';
+import { CrearMotocicletaComponent } from '@motocicleta/components/crear-motocicleta/crear-motocicleta.component';
 
 
 const routes: Routes = [
@@ -9,6 +10,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [SecurityGuard]  },
   { path: 'producto', loadChildren: () => import('@producto/producto.module').then(mod => mod.ProductoModule) },
   { path: 'motocicleta', loadChildren: () => import('@motocicleta/motocicleta.module').then(mod => mod.MotocicletaModule)},
+  { path: 'crear-motocicleta', component: CrearMotocicletaComponent },
 
 ];
 

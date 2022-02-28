@@ -1,0 +1,59 @@
+<div class="container">
+    <br />
+    <h2>Registrar Motocicletas</h2>
+  
+    <form action="container" [formGroup]="motocicletaForm" #registrarForm="ngForm">
+      <div class="row">
+        <div class="mb-3">
+          <label for="titulo" class="form-label">Nombre de la motocicleta</label>
+          <input
+            validar
+            type="text"
+            class="form-control"
+            id="nombre"
+            name="nombre"
+            formControlName="nombre"
+            placeholder="YAMAHA R1M"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-6 mb-3">
+          <label for="cantidad" class="form-label">Valor de la motocicleta</label>
+          <input
+            validar
+            type="number"
+            class="form-control"
+            id="valorMotocicleta"
+            name="valorMotocicleta"
+            formControlName="valorMotocicleta"
+            placeholder="100.000"
+          />
+        </div>
+        <div class="col-xs-12 col-md-6 mb-3">
+          <label for="precio" class="form-label">Año de modelo</label>
+          <input
+            validar
+            type="number"
+            class="form-control"
+            id="anioModelo"
+            name="anioModelo"
+            formControlName="anioModelo"
+            placeholder="2020"
+          />
+        </div>
+      </div>
+      <div class="d-grid gap-2">
+        <button
+          [disabled]="!registrarForm.form.valid"
+          id="guardar"
+          class="btn btn-dark"
+          type="submit"
+          (click)="onSubmit()"
+        >
+          Guardar
+        </button>
+      </div>
+    </form>
+  </div>
+  
