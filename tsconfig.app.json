@@ -17,6 +17,15 @@
       "@producto/*": [
         "src/app/feature/producto/*"
       ],
+      "@motocicleta/*": [
+        "src/app/feature/motocicleta/*"
+      ],
+      "@alquiler/*": [
+        "src/app/feature/alquiler/*"
+      ],
+      "@factura/*": [
+        "src/app/feature/factura/*"
+      ],
       "@shared/*": [
         "src/app/shared/*"
       ]
