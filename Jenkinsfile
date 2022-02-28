@@ -4,7 +4,7 @@ pipeline {
     }
 
     tools {
-        jdk 'JDK11_Centos'
+        jdk 'JDK8_Centos'
     }
 
     stages {
@@ -19,8 +19,8 @@ pipeline {
                     gitTool: 'Default', 
                     submoduleCfg: [], 
                     userRemoteConfigs: [[
-                        credentialsId: 'GitHub_emartinezpinzon', 
-                        url:'https://github.com/emartinezpinzon/libreriaCervantesFront'
+                        credentialsId: 'GitHub_JeissonRangel', 
+                        url:'https://github.com/JeissonRangel/alquilerMotocicletasFrontADN'
                     ]]
                 ])
             }
@@ -64,7 +64,7 @@ pipeline {
         }
         failure {
             echo 'This will run only if failed'
-            mail (to: 'emanuel.martinez@ceiba.com.co', subject: "Failed Pipeline:${currentBuild.fullDisplayName}",body: "Something is wrong with ${env.BUILD_URL}") 
+            mail (to: 'jeisson.rangel@ceiba.com.co', subject: "Failed Pipeline:${currentBuild.fullDisplayName}",body: "Something is wrong with ${env.BUILD_URL}") 
         }
         unstable {
             echo 'This will run only if the run was marked as unstable'
