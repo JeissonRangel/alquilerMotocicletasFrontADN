@@ -2,9 +2,13 @@ import { Component, OnInit } from "@angular/core";
 import { HttpErrorResponse } from '@angular/common/http';
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { MotocicletaService } from "@motocicleta/shared/service/motocicleta.service";
+import { delay, tap } from 'rxjs/operators';
+import { Router } from '@angular/router';
+
 
 
 const LONGITUD_MINIMA_PERMITIDA_TEXTO = 5;
+const ESPERA_GUARDADO = 500;
 const REGISTRO_EXITOSO = "La motocicleta a sido registrada con exito";
 
 @Component({
@@ -14,14 +18,19 @@ const REGISTRO_EXITOSO = "La motocicleta a sido registrada con exito";
 export class CrearMotocicletaComponent implements OnInit {
     
     motocicletaForm: FormGroup;
-    constructor(protected motocicletaServices: MotocicletaService){}
+    constructor(protected motocicletaServices: MotocicletaService, private router: Router){}
     
     ngOnInit() {
         this.construirFormularioMotocicleta();
     }
 
     onSubmit() {
-        this.motocicletaServices.guardar(this.motocicletaForm.value).subscribe(
+        this.motocicletaServices.guardar(this.motocicletaForm.value)
+        .pipe(
+            tap(()=> this.router.navigate(['motocicleta'])),
+            delay(ESPERA_GUARDADO)
+        )
+        .subscribe(
             () => {
               alert(REGISTRO_EXITOSO);
             },
