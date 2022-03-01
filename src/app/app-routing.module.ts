@@ -5,7 +5,6 @@ import { SecurityGuard } from '@core/guard/security.guard';
 import { HomeComponent } from '@home/home.component';
 import { CrearMotocicletaComponent } from '@motocicleta/components/crear-motocicleta/crear-motocicleta.component';
 
-
 const routes: Routes = [
   { path: '', redirectTo: '/alquiler', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, canActivate: [SecurityGuard]  },
@@ -14,6 +13,7 @@ const routes: Routes = [
   { path: 'crear-motocicleta', component: CrearMotocicletaComponent },
   { path: 'alquiler', loadChildren: ()=> import('@alquiler/alquiler.module').then(mod => mod.AlquilerModule)},
   { path: 'crear-alquiler', component: CrearAlquilerComponent },
+  { path: 'factura', loadChildren: ()=> import('@factura/factura.module').then(mod=>mod.FacturaModule)},
 
 ];
 

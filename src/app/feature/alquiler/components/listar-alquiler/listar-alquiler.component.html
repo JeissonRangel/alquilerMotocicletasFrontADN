@@ -1,6 +1,6 @@
 <div class="row">
   <div
-    class="col-12"
+    class="col-8"
     *ngFor="let alquiler of listaAlquileres | async"
   >
     <div class="card shadow-lg p-3 mb-5 bg-body rounded">
@@ -9,14 +9,20 @@
         <h3><span class="badge bg-dark">Fecha devolucion: {{ alquiler.fechaDevolucion }}</span></h3>
         <h5><span class="badge bg-dark">Salida de la ciudad: {{ alquiler.planeaSalirDeLaCiudad ? 'Si' : 'No' }}</span></h5>
         <h5><span class="badge bg-dark">Parrilero: {{ alquiler.planeaLlevarParrilero ? 'Si' : 'No' }}</span></h5>
-        <app-borrar-alquiler [idAlquiler]=alquiler.id></app-borrar-alquiler>
-        <!--app-crear-compra [libroId] = libro.id></app-crear-compra-->
+        <div class="row">
+          <div class="col-6">
+            <app-borrar-alquiler [idAlquiler]=alquiler.id></app-borrar-alquiler>
+          </div>
+          <div class="col-6">
+            <app-crear-factura [idAlquiler]=alquiler.id></app-crear-factura>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <div *ngIf="!(listaAlquileres | async)?.length">
     <div id="vacio" class="alert alert-danger" role="alert">
-      Aun no se ah creado ninguna motocicleta en el sistema
+      Aun no se ah creado ningun alquiler en el sistema
     </div>
   </div>
 </div>

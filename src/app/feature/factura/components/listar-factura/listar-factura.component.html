@@ -1,0 +1,21 @@
+<div class="row">
+  <div
+    class="col-12"
+    *ngFor="let factura of listaFacturas | async"
+  >
+    <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+      <div class="card-body">
+        <h2 class="card-title">Factura Numero: {{ factura.id }}</h2>
+        <h2 class="card-title">Fecha Compra: {{ factura.fechaCompra }}</h2>
+        <h3><span class="badge bg-dark">Seguro Vehiculo: ${{ factura.seguroVehiculo }}</span></h3>
+        <h5><span class="badge bg-dark">Poliza Personal: ${{ factura.polizaPersonal }}</span></h5>
+        <h5><span class="badge bg-dark">Total: ${{ factura.valorTotal }}</span></h5>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!(listaFacturas | async)?.length">
+    <div id="vacio" class="alert alert-danger" role="alert">
+      Aun no se ah creado ninguna factura en el sistema
+    </div>
+  </div>
+</div>

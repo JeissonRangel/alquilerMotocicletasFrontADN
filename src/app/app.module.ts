@@ -11,6 +11,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { MotocicletaModule } from '@motocicleta/motocicleta.module';
 import { AlquilerModule } from '@alquiler/alquiler.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FacturaModule } from '@factura/factura.module';
 
 
 
@@ -27,6 +28,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CoreModule,
     MotocicletaModule,
     AlquilerModule,
+    FacturaModule,
     NgbModule
   ],
   providers: [CookieService],

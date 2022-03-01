@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '@shared/shared.module';
 import { AlquilerComponent } from '@alquiler/components/alquiler/alquiler.component';
-import { CrearAlquilerComponent } from './components/crear-alquiler/crear-alquiler.component';
-import { AlquilerRoutingModule } from './alquiler-routing.module';
-import { AlquilerService } from './shared/service/alquiler.service';
+import { CrearAlquilerComponent } from '@alquiler/components/crear-alquiler/crear-alquiler.component';
+import { CrearFacturaComponent } from '@factura/components/crear-factura/crear-factura.component';
+import { AlquilerRoutingModule } from '@alquiler/alquiler-routing.module';
+import { AlquilerService } from '@alquiler/shared/service/alquiler.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ListarAlquilerComponent } from './components/listar-alquiler/listar-alquiler.component';
-import { BorrarAlquilerComponent } from './components/borrar-alquiler/borrar-alquiler.component';
+import { ListarAlquilerComponent } from '@alquiler/components/listar-alquiler/listar-alquiler.component';
+import { BorrarAlquilerComponent } from '@alquiler/components/borrar-alquiler/borrar-alquiler.component';
 
 @NgModule({
   declarations: [
     AlquilerComponent,
     CrearAlquilerComponent,
     ListarAlquilerComponent,
-    BorrarAlquilerComponent
+    BorrarAlquilerComponent,
+    CrearFacturaComponent
   ],
   imports: [
     AlquilerRoutingModule,
@@ -22,4 +24,4 @@ import { BorrarAlquilerComponent } from './components/borrar-alquiler/borrar-alq
   ],
   providers: [AlquilerService],
 })
-export class AlquilerModule { }
+export class AlquilerModule {}
