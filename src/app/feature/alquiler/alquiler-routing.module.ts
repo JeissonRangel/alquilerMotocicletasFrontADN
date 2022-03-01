@@ -11,8 +11,8 @@ const routes: Routes = [
       component: AlquilerComponent,
       children: [
         {
-            path: "crear",
-            component: CrearAlquilerComponent
+          path: "crear",
+          component: CrearAlquilerComponent
         },
         {
           path: "listar",
