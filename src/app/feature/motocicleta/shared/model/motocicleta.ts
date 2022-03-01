@@ -1,12 +1,12 @@
 export class Motocicleta {
-    id: string;
+    id: number;
     nombre: string;
     valorMotocicleta: number;
     anioModelo: number;
     disponible: boolean;
 
     constructor(
-        id: string, 
+        id: number, 
         nombre: string, 
         valorMotocicleta: number, 
         anioModelo: number, 

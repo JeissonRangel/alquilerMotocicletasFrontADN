@@ -14,18 +14,18 @@ export class AlquilerService {
     );
   }
 
-  public guardar(producto: Alquiler) {
+  public guardar(alquiler: Alquiler) {
     return this.http.doPost<Alquiler, boolean>(
       `${environment.endpoint}/alquiler`,
-      producto,
+      alquiler,
       this.http.optsName("crear/actualizar alquiler")
     );
   }
 
-  public eliminar(producto: Alquiler) {
+  public eliminar(id: number) {
     return this.http.doDelete<boolean>(
-      `${environment.endpoint}/alquiler/${producto.id}`,
-      this.http.optsName("eliminar productos")
+      `${environment.endpoint}/alquiler/${id}`,
+      this.http.optsName("eliminar alquiler")
     );
   }
 }

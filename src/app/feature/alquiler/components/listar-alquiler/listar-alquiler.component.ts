@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Alquiler } from '@alquiler/shared/model/alquiler';
 import { AlquilerService } from '@alquiler/shared/service/alquiler.service';
 import { Observable } from 'rxjs';
-import { Alquiler } from '@alquiler/shared/model/alquiler';
 
 @Component({
   selector: 'app-listar-alquiler',
@@ -9,7 +9,7 @@ import { Alquiler } from '@alquiler/shared/model/alquiler';
 })
 export class ListarAlquilerComponent implements OnInit{
 
-    public listaAlquileres: Observable<Alquiler[]>
+    public listaAlquileres: Observable<Alquiler[]>;
 
     constructor(protected alquilerService: AlquilerService){}
 

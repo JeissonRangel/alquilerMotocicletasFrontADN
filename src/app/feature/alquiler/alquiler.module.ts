@@ -6,12 +6,14 @@ import { AlquilerRoutingModule } from './alquiler-routing.module';
 import { AlquilerService } from './shared/service/alquiler.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ListarAlquilerComponent } from './components/listar-alquiler/listar-alquiler.component';
+import { BorrarAlquilerComponent } from './components/borrar-alquiler/borrar-alquiler.component';
 
 @NgModule({
   declarations: [
     AlquilerComponent,
     CrearAlquilerComponent,
-    ListarAlquilerComponent
+    ListarAlquilerComponent,
+    BorrarAlquilerComponent
   ],
   imports: [
     AlquilerRoutingModule,

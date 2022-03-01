@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AlquilerComponent } from '@alquiler/components/alquiler/alquiler.component';
 import { CrearAlquilerComponent } from '@alquiler/components/crear-alquiler/crear-alquiler.component';
 import { ListarAlquilerComponent } from './components/listar-alquiler/listar-alquiler.component';
+import { BorrarAlquilerComponent } from './components/borrar-alquiler/borrar-alquiler.component';
 
 const routes: Routes = [
     {
@@ -16,6 +17,10 @@ const routes: Routes = [
         {
           path: "listar",
           component: ListarAlquilerComponent
+        },
+        {
+          path: "borrar",
+          component: BorrarAlquilerComponent
         }
       ],
     }
