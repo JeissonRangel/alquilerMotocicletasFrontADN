@@ -10,6 +10,7 @@ import { CoreModule } from '@core/core.module';
 import { CookieService } from 'ngx-cookie-service';
 import { MotocicletaModule } from '@motocicleta/motocicleta.module';
 import { AlquilerModule } from '@alquiler/alquiler.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -25,7 +26,8 @@ import { AlquilerModule } from '@alquiler/alquiler.module';
     ProductoModule,
     CoreModule,
     MotocicletaModule,
-    AlquilerModule
+    AlquilerModule,
+    NgbModule
   ],
   providers: [CookieService],
     bootstrap: [AppComponent],

@@ -2,45 +2,38 @@
     <br />
     <h2>Registrar Alquiler</h2>
   
+    <ngb-datepicker></ngb-datepicker>
+
     <form action="container" [formGroup]="alquilerForm" #registrarForm="ngForm">
       <div class="row">
         <div class="mb-3">
-          <label for="nombre" class="form-label">Nombre de la motocicleta</label>
+          <label for="personaId" class="form-label">Identificacion de la persona</label>
           <input
             validar
             type="text"
             class="form-control"
-            id="nombre"
-            name="nombre"
-            formControlName="nombre"
-            placeholder="YAMAHA R1M"
+            id="personaId"
+            name="personaId"
+            formControlName="personaId"
+            placeholder="Numero de identificacion"
           />
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12 col-md-6 mb-3">
-          <label for="valorMotocicleta" class="form-label">Valor de la motocicleta</label>
+          <label for="cantidadDiasAlquiler" class="form-label">Cantidad de dias a alquilar</label>
           <input
             validar
             type="number"
             class="form-control"
-            id="valorMotocicleta"
-            name="valorMotocicleta"
-            formControlName="valorMotocicleta"
-            placeholder="100.000"
+            id="cantidadDiasAlquiler"
+            name="cantidadDiasAlquiler"
+            formControlName="cantidadDiasAlquiler"
+            placeholder="Cuantos dias planea alquilar la motocicleta"
           />
         </div>
         <div class="col-xs-12 col-md-6 mb-3">
-          <label for="anioModelo" class="form-label">Año de modelo</label>
-          <input
-            validar
-            type="number"
-            class="form-control"
-            id="anioModelo"
-            name="anioModelo"
-            formControlName="anioModelo"
-            placeholder="2020"
-          />
+          
         </div>
       </div>
       <div class="d-grid gap-2">

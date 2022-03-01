@@ -4,6 +4,7 @@ import { AlquilerComponent } from '@alquiler/components/alquiler/alquiler.compon
 import { CrearAlquilerComponent } from './components/crear-alquiler/crear-alquiler.component';
 import { AlquilerRoutingModule } from './alquiler-routing.module';
 import { AlquilerService } from './shared/service/alquiler.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { AlquilerService } from './shared/service/alquiler.service';
   ],
   imports: [
     AlquilerRoutingModule,
-    SharedModule
+    SharedModule,
+    NgbModule
   ],
   providers: [AlquilerService],
 })

@@ -41,7 +41,7 @@ export class CrearAlquilerComponent implements OnInit{
 
     private construirFormularioMotocicleta() {
         this.alquilerForm = new FormGroup({
-            perdonaId: new FormControl('',[Validators.required]),
+            personaId: new FormControl('',[Validators.required]),
             cantidadDiasAlquiler: new FormControl('',[Validators.required]),
             planeaSalirDeLaCiudad: new FormControl('',[Validators.required]),
             planeaLlevarParrillero: new FormControl('',[Validators.required])
