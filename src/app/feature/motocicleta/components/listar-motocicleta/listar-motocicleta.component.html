@@ -1,0 +1,22 @@
+<div class="row">
+    <div
+      class="col-xs-12 col-sm-6 col-lg-4"
+      *ngFor="let motocicleta of listaMotocicletas | async"
+    >
+      <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+        <div class="card-body">
+          <h2 class="card-title">{{ motocicleta.nombre }}</h2>
+          <h3><span class="badge bg-dark">Valor: ${{ motocicleta.valorMotocicleta }}</span></h3>
+          <h3><span class="badge bg-dark">Año Modelo: {{ motocicleta.anioModelo }}</span></h3>
+          <h5><span class="badge bg-dark">Se encuentra: {{ motocicleta.disponible ? 'Disponible' : 'No disponible' }}</span></h5>
+          <!--app-crear-compra [libroId] = libro.id></app-crear-compra-->
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!(listaMotocicletas | async)?.length">
+      <div id="vacio" class="alert alert-danger" role="alert">
+        Aun no se ah creado ninguna motocicleta en el sistema
+      </div>
+    </div>
+  </div>
+  

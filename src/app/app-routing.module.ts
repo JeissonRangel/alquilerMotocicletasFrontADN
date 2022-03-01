@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'producto', loadChildren: () => import('@producto/producto.module').then(mod => mod.ProductoModule) },
   { path: 'motocicleta', loadChildren: () => import('@motocicleta/motocicleta.module').then(mod => mod.MotocicletaModule)},
   { path: 'crear-motocicleta', component: CrearMotocicletaComponent },
+  { path: 'alquiler', loadChildren: ()=> import('@alquiler/alquiler.module').then(mod => mod.AlquilerModule)},
 
 ];
 

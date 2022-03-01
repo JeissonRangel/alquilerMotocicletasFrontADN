@@ -9,6 +9,7 @@ import { ProductoModule } from '@producto/producto.module';
 import { CoreModule } from '@core/core.module';
 import { CookieService } from 'ngx-cookie-service';
 import { MotocicletaModule } from '@motocicleta/motocicleta.module';
+import { AlquilerModule } from '@alquiler/alquiler.module';
 
 
 
@@ -23,7 +24,8 @@ import { MotocicletaModule } from '@motocicleta/motocicleta.module';
     AppRoutingModule,
     ProductoModule,
     CoreModule,
-    MotocicletaModule
+    MotocicletaModule,
+    AlquilerModule
   ],
   providers: [CookieService],
     bootstrap: [AppComponent],
