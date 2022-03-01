@@ -7,7 +7,7 @@ import { CrearMotocicletaComponent } from '@motocicleta/components/crear-motocic
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/alquiler', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, canActivate: [SecurityGuard]  },
   { path: 'producto', loadChildren: () => import('@producto/producto.module').then(mod => mod.ProductoModule) },
   { path: 'motocicleta', loadChildren: () => import('@motocicleta/motocicleta.module').then(mod => mod.MotocicletaModule)},

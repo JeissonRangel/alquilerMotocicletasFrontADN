@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AlquilerComponent } from '@alquiler/components/alquiler/alquiler.component';
 import { CrearAlquilerComponent } from '@alquiler/components/crear-alquiler/crear-alquiler.component';
+import { ListarAlquilerComponent } from './components/listar-alquiler/listar-alquiler.component';
 
 const routes: Routes = [
     {
@@ -11,6 +12,10 @@ const routes: Routes = [
         {
             path: "crear",
             component: CrearAlquilerComponent
+        },
+        {
+          path: "listar",
+          component: ListarAlquilerComponent
         }
       ],
     }

@@ -43,8 +43,8 @@ export class CrearAlquilerComponent implements OnInit{
         this.alquilerForm = new FormGroup({
             personaId: new FormControl('',[Validators.required]),
             cantidadDiasAlquiler: new FormControl('',[Validators.required]),
-            planeaSalirDeLaCiudad: new FormControl('',[Validators.required]),
-            planeaLlevarParrillero: new FormControl('',[Validators.required])
+            planeaSalirDeLaCiudad: new FormControl(false),
+            planeaLlevarParrillero: new FormControl(false)
         });
     }
 }

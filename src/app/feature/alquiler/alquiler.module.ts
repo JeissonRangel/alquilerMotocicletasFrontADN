@@ -5,11 +5,13 @@ import { CrearAlquilerComponent } from './components/crear-alquiler/crear-alquil
 import { AlquilerRoutingModule } from './alquiler-routing.module';
 import { AlquilerService } from './shared/service/alquiler.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ListarAlquilerComponent } from './components/listar-alquiler/listar-alquiler.component';
 
 @NgModule({
   declarations: [
     AlquilerComponent,
     CrearAlquilerComponent,
+    ListarAlquilerComponent
   ],
   imports: [
     AlquilerRoutingModule,

@@ -2,8 +2,6 @@
     <br />
     <h2>Registrar Alquiler</h2>
   
-    <ngb-datepicker></ngb-datepicker>
-
     <form action="container" [formGroup]="alquilerForm" #registrarForm="ngForm">
       <div class="row">
         <div class="mb-3">
@@ -33,7 +31,30 @@
           />
         </div>
         <div class="col-xs-12 col-md-6 mb-3">
-          
+            <div class=" form-check form-switch">
+                <label for="planeaSalirDeLaCiudad" class="form-check-label">Cantidad de dias a alquilar</label>
+                <input
+                type="checkbox"
+                class="form-check-input"
+                id="planeaSalirDeLaCiudad"
+                name="planeaSalirDeLaCiudad"
+                formControlName="planeaSalirDeLaCiudad"
+                placeholder="Planea salir de la ciudad"
+                />
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6 mb-3">
+            <div class=" form-check form-switch">
+                <label for="planeaLlevarParrillero" class="form-check-label">Cantidad de dias a alquilar</label>
+                <input
+                type="checkbox"
+                class="form-check-input"
+                id="planeaLlevarParrillero"
+                name="planeaLlevarParrillero"
+                formControlName="planeaLlevarParrillero"
+                placeholder="Planea llevar parrilero/a"
+                />
+            </div>
         </div>
       </div>
       <div class="d-grid gap-2">
