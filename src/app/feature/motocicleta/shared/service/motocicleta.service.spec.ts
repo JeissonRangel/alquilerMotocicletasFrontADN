@@ -9,7 +9,7 @@ import { environment } from "src/environments/environment";
 import { Motocicleta } from "../model/motocicleta";
 import { MotocicletaService } from "./motocicleta.service";
 
-describe("LibroService", () => {
+describe("MotocicletaService", () => {
     let motocicletaService: MotocicletaService;
     let motocicletaServiceMock: HttpTestingController;
   
