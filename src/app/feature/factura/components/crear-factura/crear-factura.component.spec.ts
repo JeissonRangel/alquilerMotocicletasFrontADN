@@ -4,11 +4,11 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpService } from '@core/services/http.service';
-import { AlquilerService } from '@alquiler/shared/service/alquiler.service';
 
 import { CrearFacturaComponent } from './crear-factura.component';
+import { FacturaService } from '@factura/shared/service/factura.service';
 
-describe('CrearAlquilerComponent',()=>{
+describe('CrearFacturaComponent',()=>{
     let component: CrearFacturaComponent;
     let fixture: ComponentFixture<CrearFacturaComponent>;
 
@@ -22,7 +22,7 @@ describe('CrearAlquilerComponent',()=>{
                 ReactiveFormsModule,
                 RouterTestingModule
             ],
-            providers: [AlquilerService, HttpService]
+            providers: [FacturaService, HttpService]
         })
         .compileComponents();
     });
@@ -37,10 +37,10 @@ describe('CrearAlquilerComponent',()=>{
         expect(component).toBeTruthy();
     });
 
-    it('Deberia crear un Alquiler',()=>{
+    it('Deberia crear una factura',()=>{
         const spyRedirect = spyOn(component, 'onClick').and.callThrough();
-        const botonGuardar = fixture.debugElement.nativeElement.querySelector('#guardar');
-        botonGuardar.click();
+        const botonFacturar = fixture.debugElement.nativeElement.querySelector('#facturar');
+        botonFacturar.click();
         fixture.detectChanges();
         component.onClick();
         expect(spyRedirect).toHaveBeenCalled();

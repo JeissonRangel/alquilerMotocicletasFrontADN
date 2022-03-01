@@ -27,7 +27,7 @@ export class CrearFacturaComponent implements OnInit{
         this.facturaService
         .guardar(factura)
         .pipe(
-            tap(() => this.router.navigate(['factura'])),
+            tap(() => this.router.navigate(['/'])),
             delay(ESPERA_GUARDADO)
         )
         .subscribe(
